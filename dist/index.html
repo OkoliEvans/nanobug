@@ -5,6 +5,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./output.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+      integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
     <title>tailwind Nano</title>
   </head>
   <body>
@@ -12,7 +19,7 @@
       <div class="flex items-center justify-between">
         <!-- Logo -->
         <div class="pt-2 flex items-center">
-          <img src="../assets/dominos.png" alt="" class="h-8 w-10" />
+          <img src="../assets/dominos.png" alt="" class="h-9 w-12" />
           <h1 class="text-lg font-bold -ml-2">Nano-AI</h1>
         </div>
 
@@ -31,7 +38,31 @@
         >
           Get started
         </a>
+
+        <!-- Hamburger icon-->
+        <button
+          id="menu-btn"
+          class="block hamburger md:hidden focus:outline-none"
+        >
+          <span class="hamburger-top"></span>
+          <span class="hamburger-middle"></span>
+          <span class="hamburger-bottom"></span>
+        </button>
       </div>
+
+      <!-- Mobile menu -->
+      <div class="md:hidden">
+        <div id="menu" class="absolute flex-col items-center self-end hidden py-8 mt-10 space-y-6
+        font-bold bg-white w-auto sm:self-center left-6 right-6 drop-shadow-md">
+
+        <a href="#">Stacks</a>
+        <a href="#">Portfolio</a>
+        <a href="#">Reviews</a>
+        <a href="#">Socials</a>
+
+        </div>
+      </div>
+
     </nav>
 
     <!-- Hero section -->
@@ -191,53 +222,170 @@
 
         <!-- Testimonials container -->
         <div class="flex flex-col mt-24 md:flex-row md:space-x-6">
-            <!-- Testimonial 1-->
-            <div class="flex flex-col items-center p-6 space-y-6 rounded-lg bg-LightGray
-              md:w-1/3">
-              <img src="../assets/barbie.jpg" alt="" class="h-16 w-16 object-cover -mt-14 rounded-full">
-              <h5 class="text-lg font-bold">Cyndi C.</h5>
-              <p class="text-sm text-darkFaintBlue">
-                Nano-AI has made our marketing super easy and very profitable within the 
-                short period of time we tried it. It is really a super useful machine for 
-                everyone who markets online.
-              </p>
-            </div>
+          <!-- Testimonial 1-->
+          <div
+            class="flex flex-col items-center p-6 space-y-6 rounded-lg bg-LightGray md:w-1/3"
+          >
+            <img
+              src="../assets/barbie.jpg"
+              alt=""
+              class="h-16 w-16 object-cover -mt-14 rounded-full"
+            />
+            <h5 class="text-lg font-bold">Cyndi C.</h5>
+            <p class="text-sm text-darkFaintBlue">
+              Nano-AI has made our marketing super easy and very profitable
+              within the short period of time we tried it. It is really a super
+              useful machine for everyone who markets online.
+            </p>
+          </div>
 
-            <div class=" hidden flex-col items-center p-6 space-y-6 rounded-lg bg-LightGray
-              md:w-1/3 md:flex">
-              <img src="../assets/user002.jpg" alt="" class="h-16 w-16 object-cover -mt-14 rounded-full">
-              <h5 class="text-lg font-bold">Brymo C-jeks.</h5>
-              <p class="text-sm text-darkFaintBlue">
-                Nano-AI has made our marketing super easy and very profitable within the 
-                short period of time we tried it. It is really a super useful machine for 
-                everyone who markets online.
-              </p>
-            </div>
+          <div
+            class="hidden flex-col items-center p-6 space-y-6 rounded-lg bg-LightGray md:w-1/3 md:flex"
+          >
+            <img
+              src="../assets/user002.jpg"
+              alt=""
+              class="h-16 w-16 object-cover -mt-14 rounded-full"
+            />
+            <h5 class="text-lg font-bold">Brymo C-jeks.</h5>
+            <p class="text-sm text-darkFaintBlue">
+              Nano-AI has made our marketing super easy and very profitable
+              within the short period of time we tried it. It is really a super
+              useful machine for everyone who markets online.
+            </p>
+          </div>
 
-            <div class="hidden flex-col items-center p-6 space-y-6 rounded-lg bg-LightGray
-              md:w-1/3 md:flex">
-              <img src="../assets/mayor.jpg" alt="" class="h-16 w-16 object-cover -mt-14 rounded-full">
-              <h5 class="text-lg font-bold">Odogwu</h5>
-              <p class="text-sm text-darkFaintBlue">
-                Nano-AI has made our marketing super easy and very profitable within the 
-                short period of time we tried it. It is really a super useful machine for 
-                everyone who markets online.
-              </p>
-            </div>
+          <div
+            class="hidden flex-col items-center p-6 space-y-6 rounded-lg bg-LightGray md:w-1/3 md:flex"
+          >
+            <img
+              src="../assets/mayor.jpg"
+              alt=""
+              class="h-16 w-16 object-cover -mt-14 rounded-full"
+            />
+            <h5 class="text-lg font-bold">Odogwu</h5>
+            <p class="text-sm text-darkFaintBlue">
+              Nano-AI has made our marketing super easy and very profitable
+              within the short period of time we tried it. It is really a super
+              useful machine for everyone who markets online.
+            </p>
+          </div>
         </div>
 
         <!-- Get started Button-->
         <div class="my-16">
-            <a
+          <a
             href="#"
             class="p-3 px-6 pt-2 text-white bg-brightRed rounded-full self-baseline hover:bg-brightRedLight"
           >
             Get started
           </a>
         </div>
-
       </div>
     </section>
+
+    <!-- CTA section -->
+    <section id="cta" class="bg-brightRed">
+      <!-- Flex container -->
+      <div
+        class="container flex flex-col items-center justify-between px-6 py-24 mx-auto space-y-12 md:py-12 md:flex-row md:space-y-0"
+      >
+        <!-- heading -->
+        <h2
+          class="text-5xl font-bold leading-tight text-center text-white md:text-4xl md:max-w-xl md:text-left"
+        >
+          Launch your cutting edge nano-sharp ads today
+        </h2>
+
+        <!-- Button -->
+        <div>
+          <a
+            href="#"
+            class="p-3 px-6 pt-2 text-brightRed bg-white rounded-full self-baseline shadow-2xl hover:bg-gray-300 font-bold"
+          >
+            Get started
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- footer -->
+    <footer class="bg-DeepDarkBlue">
+      <!-- Flex container-->
+      <div
+        class="container flex flex-col-reverse justify-between px-6 py-10 mx-auto space-y-8 md:flex-row md:space-y-0"
+      >
+        <!-- Logo and socials -->
+        <div
+          class="flex flex-col-reverse items-center justify-between space-y-12 md:flex-col md:space-y-0 md:items-start"
+        >
+          <div class="mx-auto my-6 text-center text-white md:hidden">
+            Copyright &copy; 2022, All Rights Reserved
+          </div>
+
+          <!-- logo -->
+          <div class="flex items-center">
+            <img
+              src="../assets/dominos.png"
+              alt=""
+              class="h-10 w-12 rounded-full"
+            />
+            <h1 class="text-lg font-bold text-white ml-2">Nano-AI</h1>
+          </div>
+
+          <!-- socials -->
+          <div class="flex justify-center space-x-4 text-white text-2xl">
+            <a href="#"><i class="fa-brands fa-square-facebook"></i></a>
+            <a href="#"><i class="fa-brands fa-youtube"></i></a>
+            <a href="#"><i class="fa-brands fa-square-twitter"></i></a>
+            <a href="#"><i class="fa-brands fa-square-pinterest"></i></a>
+            <a href="#"><i class="fa-brands fa-square-instagram"></i></a>
+          </div>
+        </div>
+
+        <!-- List container -->
+        <div class="flex justify-around space-x-32">
+          <div class="flex flex-col space-y-3 text-white">
+            <a href="#" class="hover:text-brightRed">Home</a>
+            <a href="#" class="hover:text-brightRed">About me</a>
+            <a href="#" class="hover:text-brightRed">Portfolio</a>
+            <a
+              href="#"
+              class="hover:text-brightRed"
+              title="open source projects"
+              >OS projects</a
+            >
+          </div>
+
+          <div class="flex flex-col space-y-3 text-white">
+            <a href="#" class="hover:text-brightRed">Mentorship</a>
+            <a href="#" class="hover:text-brightRed">Contact</a>
+          </div>
+        </div>
+
+        <!-- Input container-->
+        <div class="flex flex-col justify-between">
+          <form>
+            <div class="flex space-x-3">
+              <input
+                type="text"
+                class="flex-1 px-4 rounded-full focus:outline-none"
+                placeholder="Get updates and tips"
+              />
+              <button
+                class="px-6 py-2 text-white rounded-full bg-brightRed hover:bg-FaintRed focus:outline-none"
+              >
+                Go
+              </button>
+            </div>
+          </form>
+
+          <div class="hidden text-white md:block">
+            Copyright &copy; 2022, All Rights Reserved
+          </div>
+        </div>
+      </div>
+    </footer>
 
     <script src="index.js"></script>
   </body>
